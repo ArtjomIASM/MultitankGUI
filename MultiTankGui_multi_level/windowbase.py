@@ -269,7 +269,7 @@ class WindowBase(QtGui.QDialog):
 
     def setTexts(self):
         self.groupBoxNetworkInit.setTitle("Network Initialization")
-        self.labelClientHost.setText("Client Host:")
+        self.labelClientHost.setText("Client IP:")
         self.labelClientPort.setText("Client Port:")
         self.labelServerHost.setText("Server Host:")
         self.labelServerPort.setText("Server Port:")
