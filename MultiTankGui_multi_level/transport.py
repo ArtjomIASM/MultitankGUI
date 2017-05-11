@@ -5,7 +5,6 @@ from struct import unpack, pack_into
 from sys import exc_info
 from config import *
 
-SOCKET_ERROR_NOTHING_TO_RECEIVE = 35
 ITEM_SIZE_IN_BYTES = 8
 SENSORS_CALIBRATED_VAR = 100
 
@@ -125,8 +124,5 @@ class Transport:
                     finally:
                         self.cbkLock.release()
                 except SocketError as e:
-                    # When nothing to receive just continue trying otherwise raise an exception
-                    #if e[0] != SOCKET_ERROR_NOTHING_TO_RECEIVE:
-                        #raise
                     pass
         self.receiverStopped.set()
