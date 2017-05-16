@@ -52,7 +52,8 @@ class BasicWindow(WindowBase):
 
     def updateValue(self, value, objLabel, strNameForLog):
         #TODO: Test in lab
-        #self.onSend()
+        self.onSend()
+        
         formattedValue = '{0:.3f}'.format(value / self.LEVEL_SLIDER_STEPS)
         objLabel.setText(formattedValue)
         print strNameForLog + ": " + formattedValue
@@ -90,7 +91,7 @@ class BasicWindow(WindowBase):
         self.labelInputValve2.setText("0.000")
         self.labelInputValve3.setText("0.000")
         self.labelWarnValues.setText("NB! VALUES FROM 0,000 - 1,000")
-        self.btnSendData.setText("Send")
+        self.btnSendData.setText("Send/Resume")
 
     def createUI(self):
         super(BasicWindow, self).createUI()
