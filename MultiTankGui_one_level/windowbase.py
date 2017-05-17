@@ -48,8 +48,8 @@ class WindowBase(QtGui.QDialog):
             lstDataRow.extend(self.firstSentBeforeReceive[1]) # additional values like PID.error
         else:
             nOutAndInternalColumns = len(self.getColumnNamesForSave()) - len(lstServerData)
-            lstDataRow = ['0.0000'] * nOutAndInternalColumns       # Try here [0.0, 0.0, 0.0 0.0]
-        lstDataRow.extend([formatFloat(val) for val in lstServerData])                      # values received from the server
+            lstDataRow = ['0.0000'] * nOutAndInternalColumns # Try here [0.0, 0.0, 0.0 0.0]
+        lstDataRow.extend([formatFloat(val) for val in lstServerData]) # values received from the server
         self.saveLock.acquire(True)
         try:
             self.lstData.append(lstDataRow)
