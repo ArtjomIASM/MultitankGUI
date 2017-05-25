@@ -25,7 +25,7 @@ class GraphCanvas(FigureCanvas, TimedAnimation):
         self.graphXLimit = graphXLimit
         self.graphYLimit = graphYLimit
         self.graphYLevelMin = graphYLevelMin
-        self.valuesXYP = ([0.0], [0.0], -1)  # Must not be accessed directly only via sedData() and getData()
+        self.valuesXYP = ([0.0], [0.0], -1)
         self.dataLock = Lock()
 
         # The window
