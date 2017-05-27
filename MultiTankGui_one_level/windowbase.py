@@ -111,7 +111,7 @@ class WindowBase(QtGui.QDialog):
         self.btnSendData.setEnabled(True)
         self.btnConnect.setEnabled(False)
 
-        #Graph buttons start
+        # Graph buttons start
         self.btnShowGraph1.setEnabled(True)
         self.btnShowGraph2.setEnabled(True)
         self.btnShowGraph3.setEnabled(True)
