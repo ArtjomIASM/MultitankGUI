@@ -50,13 +50,12 @@ class BasicWindow(WindowBase):
     def onLevel3Changed(self, value):
         self.updateValue(value, self.labelInputValve3, "Level3")
 
-    def updateValue(self, value, objLabel, strNameForLog):
-        #TODO: Test in lab
-        self.onSend()
-        
+    def updateValue(self, value, objLabel, strNameForLog):        
         formattedValue = '{0:.3f}'.format(value / self.LEVEL_SLIDER_STEPS)
         objLabel.setText(formattedValue)
         print strNameForLog + ": " + formattedValue
+        # Remove comment from "self.onSend()" for instant send
+        #self.onSend()
 
     def connectHandlers(self):
         super(BasicWindow, self).connectHandlers()
