@@ -3,8 +3,8 @@ from basicwindow import BasicWindow
 from pidwindow import PIDWindow
 
 class MainWindow(QtGui.QMainWindow):
-    def __init__(self, parent=None): # Here starts class instance
-        super(MainWindow, self).__init__(parent) # Calling constructor MainWindow
+    def __init__(self, parent=None): 
+        super(MainWindow, self).__init__(parent) 
 
         self.createUI()
         self.connectHandlers()
